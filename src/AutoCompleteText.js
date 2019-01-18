@@ -3,25 +3,18 @@ class AutoCompleteText extends Component {
   constructor(props) {
     super(props);
 
-    this.items = [
-      "sharma",
-      "himanshu",
-      "shukla",
-      "mayank",
-      "chauhan",
-      "manishka"
-    ];
     this.state = {
       suggestions: [],
       text: ""
     };
   }
   onTextChanged = e => {
+    const { items } = this.props;
     const text = e.target.value;
     let suggestions = [];
     if (text.length > 0) {
       const regex = new RegExp(`^${text}`, "i");
-      suggestions = this.items.sort().filter(v => regex.test(v));
+      suggestions = items.sort().filter(v => regex.test(v));
     }
     this.setState(() => ({ suggestions, text }));
   };
