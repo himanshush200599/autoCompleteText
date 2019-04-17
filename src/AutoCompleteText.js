@@ -1,4 +1,9 @@
 import React, { Component } from "react";
+
+//This is a classbaswd component and here i am writing the main logic with regular expression
+//TODO is to use functional based  components with react hooks
+//This basically auto suggests text on the basis of some words enter into input box.
+//AUTHOR - Himanshu sharma
 class AutoCompleteText extends Component {
   constructor(props) {
     super(props);
